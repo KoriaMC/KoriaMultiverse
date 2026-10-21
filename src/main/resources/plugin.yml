@@ -1,0 +1,56 @@
+name: KoriaMultiverse
+version: ${project.version}
+main: fr.koriamc.multiverse.KoriaMultiverse
+author: KoriaMC
+description: ${project.description}
+softdepend: [Vault, PlaceholderAPI]
+# Les mondes gérés sont chargés avant les plugins qui peuvent s'en servir (zones de KOTH, totems, claims).
+loadbefore: [KoriaFactions, KoriaKoth, KoriaTotem, KoriaQuest]
+
+# La commande principale (/mv par défaut) et ses alias sont enregistrés dynamiquement
+# depuis config.json : ils ne sont donc pas déclarés ici.
+
+permissions:
+  koriamultiverse.*:
+    description: Accès complet à KoriaMultiverse
+    default: op
+    children:
+      koriamultiverse.player: true
+      koriamultiverse.admin: true
+      koriamultiverse.acces.*: true
+      koriamultiverse.bypass.*: true
+  koriamultiverse.player:
+    description: Commandes joueur (les nœuds exacts sont définis dans config.json)
+    default: true
+  koriamultiverse.admin:
+    description: Commandes d'administration (les nœuds exacts sont définis dans config.json)
+    default: op
+  koriamultiverse.admin.tp.autres:
+    description: Téléporter d'autres joueurs avec /mv tp <monde> <joueur>
+    default: op
+  koriamultiverse.acces.*:
+    description: Entrer dans tous les mondes, quelle que soit leur permission d'accès
+    default: op
+  koriamultiverse.bypass.*:
+    description: Ignorer le prix, la limite de joueurs, le mode de jeu imposé et le retrait du vol
+    default: op
+    children:
+      koriamultiverse.bypass.prix: true
+      koriamultiverse.bypass.limite: true
+      koriamultiverse.bypass.modedejeu: true
+      koriamultiverse.bypass.vol: true
+  koriamultiverse.bypass.prix:
+    description: Entrer sans payer le prix d'entrée
+    default: op
+  koriamultiverse.bypass.limite:
+    description: Entrer dans un monde plein
+    default: op
+  koriamultiverse.bypass.modedejeu:
+    description: Garder son mode de jeu en changeant de monde
+    default: op
+  koriamultiverse.bypass.vol:
+    description: Garder le vol en changeant de monde
+    default: op
+  koriamultiverse.portail.*:
+    description: Passer par tous les portails personnalisés, quelle que soit leur permission
+    default: op

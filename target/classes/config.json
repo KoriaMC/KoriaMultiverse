@@ -1,0 +1,71 @@
+{
+  "debug": false,
+  "commande": { "nom": "mv", "alias": ["multiverse", "worlds", "koriamv"], "description": "Gestion des mondes" },
+  "commandes": {
+    "help": { "actif": true, "alias": ["?"], "permission": "koriamultiverse.command.help" },
+    "menu": { "actif": true, "alias": ["gui"], "permission": "koriamultiverse.command.menu" },
+    "list": { "actif": true, "alias": ["ls"], "permission": "koriamultiverse.command.list" },
+    "info": { "actif": true, "alias": ["i"], "permission": "koriamultiverse.command.info" },
+    "who": { "actif": true, "alias": ["players"], "permission": "koriamultiverse.command.who" },
+    "tp": { "actif": true, "alias": ["teleport"], "permission": "koriamultiverse.admin.tp" },
+    "spawn": { "actif": true, "alias": [], "permission": "koriamultiverse.admin.spawn" },
+    "setspawn": { "actif": true, "alias": ["ss"], "permission": "koriamultiverse.admin.setspawn" },
+    "create": { "actif": true, "alias": ["new"], "permission": "koriamultiverse.admin.create" },
+    "import": { "actif": true, "alias": ["imp"], "permission": "koriamultiverse.admin.import" },
+    "load": { "actif": true, "alias": [], "permission": "koriamultiverse.admin.load" },
+    "unload": { "actif": true, "alias": [], "permission": "koriamultiverse.admin.unload" },
+    "delete": { "actif": true, "alias": ["del"], "permission": "koriamultiverse.admin.delete" },
+    "remove": { "actif": true, "alias": ["forget"], "permission": "koriamultiverse.admin.remove" },
+    "clone": { "actif": true, "alias": ["copy"], "permission": "koriamultiverse.admin.clone" },
+    "regen": { "actif": true, "alias": ["regenerate"], "permission": "koriamultiverse.admin.regen" },
+    "modify": { "actif": true, "alias": ["set", "mod"], "permission": "koriamultiverse.admin.modify" },
+    "gamerule": { "actif": true, "alias": ["rule", "gr"], "permission": "koriamultiverse.admin.gamerule" },
+    "portal": { "actif": true, "alias": ["portals", "p"], "permission": "koriamultiverse.admin.portal" },
+    "config": { "actif": true, "alias": ["configuration", "cfg"], "permission": "koriamultiverse.admin.config" },
+    "reload": { "actif": true, "alias": ["rl"], "permission": "koriamultiverse.admin.reload" }
+  },
+  "arrivee": { "premier-monde": "", "toujours-au-spawn": false },
+  "teleportation": { "position-sure": true, "message-arrivee": true, "reapparition-dans-le-monde": true },
+  "portails": { "actif": true },
+  "dimensions": { "nether": false, "end": false },
+  "creatures": {
+    "bloquer-apparition-naturelle": true,
+    "raisons-bloquees": ["NATURAL", "CHUNK_GEN", "JOCKEY", "MOUNT", "VILLAGE_INVASION", "VILLAGE_DEFENSE", "REINFORCEMENTS", "NETHER_PORTAL"],
+    "mondes-exceptes": []
+  },
+  "portails-personnalises": {
+    "actif": true,
+    "baguette": "BLAZE_ROD",
+    "delai-anti-boucle-secondes": 2,
+    "proteger": true,
+    "volume-maximum": 4096
+  },
+  "monde-vide": { "bloc-spawn": "BEDROCK", "hauteur-spawn": 64 },
+  "nouveaux-mondes": {
+    "charger-au-demarrage": true,
+    "garder-spawn-en-memoire": true,
+    "sauvegarde-auto": true,
+    "pvp": true,
+    "difficulte": "NORMAL",
+    "mode-de-jeu": "",
+    "vol-autorise": false,
+    "meteo": true,
+    "heure": -1,
+    "faim": true,
+    "monstres": true,
+    "animaux": true,
+    "acces": { "permission": "", "prix": 0.0, "limite-joueurs": 0 },
+    "reapparition": "",
+    "portails": { "nether": "", "end": "", "echelle": 1.0 },
+    "bordure": { "taille": 0.0, "centre-x": 0.0, "centre-z": 0.0 },
+    "regles": {}
+  },
+  "sons": {
+    "teleportation": "ENDERMAN_TELEPORT:0.6:1",
+    "portail": "ENDERMAN_TELEPORT:0.8:1.2",
+    "refus": "VILLAGER_NO",
+    "clic-menu": "CLICK:0.5:1",
+    "erreur": "VILLAGER_NO"
+  },
+  "titres": { "apparition": 5, "duree": 40, "disparition": 10 }
+}
