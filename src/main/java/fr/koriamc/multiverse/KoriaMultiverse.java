@@ -36,6 +36,7 @@ import java.util.logging.Level;
  * KoriaMultiverse : gestion des mondes pour KoriaMC (Spigot 1.8.8), dans l'esprit de
  * Multiverse-Core : création, import, chargement, téléportation, propriétés par monde,
  * portails et monde vide.
+ * Voilà le rajout
  */
 public final class KoriaMultiverse extends JavaPlugin {
 
